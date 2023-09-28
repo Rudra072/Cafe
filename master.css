@@ -1,5 +1,6 @@
 *, *::before, *::after {
     box-sizing: border-box;
+    outline: 2px solid red;
 }
 
 @font-face {
@@ -74,7 +75,7 @@ body {
     top: -10%;
     width: 10rem;
     height: 10rem;
-    transform: scale(9.5);
+    transform: scale(7.5);
     border-radius: 50%;
     background-image: radial-gradient(circle farthest-corner at 40% 50%, var(--fifth-clr), var(--fifth-clr) 0%, rgba(5, 10, 24, 0) 70%);
     opacity: 1;
@@ -86,7 +87,6 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 0 0 3rem;
-    height: 100%;
 }
 
 .main {
@@ -95,15 +95,14 @@ body {
 
 .sign-up-in-form {
     background-color: var(--fifth-clr);
-    /*! background-color: rgb(5, 10, 24); */
-    padding: 5rem;
+    padding: 5em;
     width: clamp(350px, 80%, 600px);
     border-radius: 20px 0 0 0;
     border-left: 1px solid var(--border-color);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 92.5dvh;
+    min-height: 89.5vh;
 }
 
 .quote {
@@ -195,4 +194,23 @@ input {
 .validation-message {
     display: none;
     font-size: 10px;
+}
+
+@media only screen and (max-width: 925px){
+    .main{
+        flex-direction: column;
+    }
+    .sign-up-in-form{
+        border-radius: 20px;
+        margin-top: 100px;
+    }
+    .heading{
+        display: none;
+    }
+    .contact__gradient{
+        display: none;
+    }
+    .input-fields{
+        font-size: 12px;
+    }
 }
